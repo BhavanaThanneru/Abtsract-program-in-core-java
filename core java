@@ -1,0 +1,24 @@
+abstract class Product {
+    Product() {
+        System.out.println("Product abstract class constructor");
+    }
+    abstract public void newProduct();
+    public void allProducts() {
+        System.out.println("All Products");
+    }
+}
+public class ProductImp1 extends Product {
+    public void newProduct() {
+        System.out.println("Mac : Laptop\niphone : mobile");
+    }
+    public void show() {
+        System.out.println("Local show method");
+    }
+    public static void main(String[] args) {
+        ProductImp1 p1 = new ProductImp1();
+        p1.allProducts();
+        p1.newProduct();
+        p1.show();
+        System.out.println(p1.hashCode());
+    }
+}
